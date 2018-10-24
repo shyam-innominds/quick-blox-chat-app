@@ -1,0 +1,21 @@
+<div class="users_chat_wrapper">
+  <div class="user_chat_screen clearfix">
+      <div class="pull-left">
+          <h4>{{ user.user.login }}</h4>
+      </div>
+  </div>
+  <div class="chat_history">
+    <div *ngFor="let item of chatData">
+      <p [ngClass]="(item.sender_id == loggedInId)?'right-content':'left-content'"><span class="chat-item" >{{item.message}}</span></p>
+    </div>
+  </div>
+  <form #f="ngForm">
+  <div class="type_message form-group">
+      <input type="text" class="form-control" name="message" ngModel id="message" />
+       
+      <a class="send_chat_text" (click)="onSendMessage(user.user.id, f); f.reset();">
+        <span class="glyphicon glyphicon-share-alt"></span>
+      </a>
+    </div>
+  </form>
+</div>
