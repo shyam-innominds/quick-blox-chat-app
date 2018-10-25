@@ -25,7 +25,7 @@ export class UsersListComponent implements OnInit {
     this.userData = JSON.parse(sessionStorage.getItem('sessionDetails'));
     this.userLoginDetails = JSON.parse(sessionStorage.getItem('loginDetails'));
     this.userService._notification
-      .subscribe((data) => {debugger;
+      .subscribe((data) => { 
         this.receivedChatObj = data;
         if( this.selectedUser == undefined || this.selectedUser.user.id !== data.from){
           var d = document.getElementById(data.from);
@@ -41,7 +41,7 @@ export class UsersListComponent implements OnInit {
         this.loggedInUser = data.user;
       });   
       this.userService.selectedUser
-        .subscribe((user: any) => {debugger;
+        .subscribe((user: any) => { 
           this.selectedUser = user;
         }); 
     console.log(this.users);

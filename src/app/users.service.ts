@@ -23,6 +23,10 @@ export class UsersService {
     "turnserver_endpoint": "turnserver.quickblox.com"
 };
   config = {
+    // appId: 74282,
+    // authKey: 'ENFggvVB2trchUa',
+    // authSecret: 'MQTsDR6cFLWHdOq'
+
     appId: 74277,
     authKey: 'aqFLpyRgAeaRMj6',
     authSecret: 'PPjY3L8UdK5h85Y'
@@ -31,7 +35,7 @@ export class UsersService {
   user = {
     name: '',
     login: '',
-    pass: '',
+    password: '',
     id: '',
     token : ''
   };

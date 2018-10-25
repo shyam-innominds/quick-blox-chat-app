@@ -36,9 +36,9 @@ export class LoginComponent implements OnInit {
         if(res.user_id){
           sessionStorage.setItem('sessionDetails',JSON.stringify(res));
           sessionStorage.setItem('loginDetails',JSON.stringify(value));
-          this.user.login = value.username;
-          this.user.password = value.password;
-          this.user.token = res.token;
+          this.userService.user.login = value.username;
+          this.userService.user.password = value.password;
+          this.userService.user.token = res.token;
           this.router.navigate(['main',this.user.token, res.user_id ]);
         }        
       }

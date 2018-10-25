@@ -37,7 +37,7 @@ export class UserChatComponent implements OnInit {
         let chatDialogID = data.items[0]._id;
         let url = this.endpoints.api_endpoint + "/chat/Message.json?chat_dialog_id="+ chatDialogID;
         this.userService.getChatHistory(url,token)
-          .subscribe((data: any) => {debugger;
+          .subscribe((data: any) => { 
             this.chatData = data.items;
           });
         

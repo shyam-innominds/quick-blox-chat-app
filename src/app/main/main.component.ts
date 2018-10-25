@@ -27,7 +27,7 @@ export class MainComponent implements OnInit {
     this.endpoints = userService._endpoints;
     this._config = userService.config;
   }
-  receiveMessage = (userId,msg) => {debugger;
+  receiveMessage = (userId,msg) => { 
     this.notificationObj = {
       from : userId,
       body: msg.body
@@ -41,7 +41,7 @@ export class MainComponent implements OnInit {
     let id = this.route.snapshot.params.id;
     let params = {
       userId  : id,
-      password : this.user.pass
+      password : this.userService.user.password
     };
     
     console.log(this.route.snapshot);
