@@ -17,7 +17,7 @@
 	5.Navigate to http://localhost:4200/.
 
 # sample users:
-	1. login: shyam, password: innominds@123
+	1. login: shyam1, password: innominds@123
 	2. login: rupesh, password: innominds@123
 	3. login: govardhan, password: innominds@123
 
